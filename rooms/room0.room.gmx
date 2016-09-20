@@ -13,7 +13,8 @@
   <code>global.maxbullet = 6;
 global.bullet = 6;
 global.reloadtime = 40;
-global.reload = 0;</code>
+global.reload = 0;
+global.gunSwitch = false;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

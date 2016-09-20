@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-5</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>gunCommon</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="3" enumb="0">
@@ -44,10 +44,10 @@ global.reload = 0;
 else
 {
 object4.depth = 5;//gun on bottom
-if (instance_place(object4.x,object4.y,object1))!= noone
+/*if (instance_place(object4.x,object4.y,object1))!= noone
 {
 //collision detection with player
-if (keyboard_check_pressed('E')==true)//if picked up change gun array value and reload time
+if (keyboard_check_pressed('E'))//if picked up change gun array value and reload time
    {
    var i;
 i = 9;
@@ -58,10 +58,11 @@ for(i = 0; i &lt; 10; i++)
    global.gunArray[0] = true;
    global.reloadtime = 40;
    global.maxbullets = 6;
+   global.bullets = 6;
    }
    }
+}*/
 }
-
 </string>
           </argument>
         </arguments>
@@ -84,7 +85,8 @@ for(i = 0; i &lt; 10; i++)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>script_execute(script0);
+            <string>shotDelay = 4;
+currentDelay = 0;
 </string>
           </argument>
         </arguments>
@@ -118,7 +120,67 @@ else
 {
 image_angle = point_direction(x, y, mouse_x, mouse_y);//follow cursor
 }
-draw_sprite(sprite_index,image_index,x,y)
+
+
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="69">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/*if (instance_place(object4.x,object4.y,object1))!= noone
+{
+//collision detection with player
+ var i;
+i = 9;
+for(i = 0; i &lt; 10; i++)
+   {
+   global.gunArray[i] = false;
+   }
+   global.gunArray[0] = true;
+   global.reloadtime = 40;
+   global.maxbullets = 6;
+   global.bullets = 6;
+   
+}*/
+if (instance_place(object4.x,object4.y,object1))!= noone &amp;&amp; global.gunSwitch = false
+{
+if (global.gunArray[0] != true)
+{
+   {
+   var i;
+for(i = 0; i &lt; 10; i++)
+   {
+   global.gunArray[i] = false;
+   }
+   global.gunArray[0] = true;
+   global.maxbullet = 6;;
+   global.reloadtime = 40;
+   global.reload = global.reloadtime;
+   global.bullets = global.maxbullet;
+   }
+   global.gunSwitch = true;
+}
+}
+
+
 </string>
           </argument>
         </arguments>
