@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>object4.x = object1.x -4;
-object4.y=object1.y+2;
+            <string>object4.x = object1.x+object1.sprite_width/4;
+object4.y=object1.y;
 image_angle = point_direction(x, y, mouse_x, mouse_y);
 </string>
           </argument>
