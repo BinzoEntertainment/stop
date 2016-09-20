@@ -28,6 +28,7 @@
     <object>objects\object4</object>
     <object>objects\object5</object>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
