@@ -30,7 +30,6 @@
     <object>objects\object5</object>
     <object>objects\obj_wall</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>

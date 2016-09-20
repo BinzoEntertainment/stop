@@ -27,9 +27,9 @@
             <kind>1</kind>
             <string>if keyboard_check (ord('A')) and place_free (x-10,y) x -= 10;
 
-if keyboard_check (ord('W')) and place_free (y-10,y) y -= 10;
+if keyboard_check (ord('W')) and place_free (x,y-10) y -= 10;
 
-if keyboard_check (ord('S')) and place_free (y+10,y) y += 10;
+if keyboard_check (ord('S')) and place_free (x,y+10) y += 10;
 
 if keyboard_check (ord('D')) and place_free (x+10,y) x += 10;
 </string>
