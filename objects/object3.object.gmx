@@ -49,10 +49,21 @@ object3.y = mouse_y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.bullet &gt; 0)
+            <string>if (global.gunArray[0] == true)
+{
+if(global.bullet &gt; 0)
 {
 instance_create(object4.x, object4.y, object2);
 global.bullet--;
+}
+}
+if (global.gunArray[1] == true)
+{
+if(global.bullet &gt; 0)
+{
+instance_create(object6.x, object6.y, object2);
+global.bullet--;
+}
 }
 
 </string>
