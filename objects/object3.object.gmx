@@ -27,6 +27,25 @@
             <kind>1</kind>
             <string>object3.x = mouse_x;
 object3.y = mouse_y;
+if mouse_button = mb_left
+   {
+   if (global.gunArray[1] == true)
+        {
+        if (object6.currentDelay &gt; 0)
+        {
+            object6.currentDelay--;
+}
+else
+{
+if(global.bullet &gt; 0)
+{
+instance_create(object6.x, object6.y, object2);
+global.bullet--;
+object6.currentDelay = object6.shotDelay;
+}
+}
+}
+   }
 </string>
           </argument>
         </arguments>
@@ -49,11 +68,20 @@ object3.y = mouse_y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.bullet &gt; 0)
+            <string>if (global.gunArray[0] == true)
+{
+if (object4.currentDelay &lt; 0)
+{
+object4.currentDelay--;
+}
+if(global.bullet &gt; 0)
 {
 instance_create(object4.x, object4.y, object2);
 global.bullet--;
+object4.currentDelay = object4.shotDelay;
 }
+}
+
 
 </string>
           </argument>

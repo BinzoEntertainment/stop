@@ -3,7 +3,7 @@
   <spriteName>sprite4</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-10</depth>
+  <depth>-6000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,9 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>object5.x= object4.x
+            <string>if (global.gunArray[0]==true)
+{
+object5.x= object4.x
 object5.y=object4.y
 image_angle = point_direction(x, y, mouse_x, mouse_y);
+}
+if (global.gunArray[1]==true)
+{
+object5.x= object6.x;
+object5.y=object6.y;
+image_angle = point_direction(x, y, mouse_x, mouse_y);
+}
 </string>
           </argument>
         </arguments>
