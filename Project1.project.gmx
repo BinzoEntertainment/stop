@@ -8,6 +8,8 @@
     <sound>sound\sound0</sound>
   </sounds>
   <sprites name="sprites">
+    <sprite>sprites\razorSlashSprite</sprite>
+    <sprite>sprites\straightRazorSprite</sprite>
     <sprite>sprites\sprite0</sprite>
     <sprite>sprites\sprite1</sprite>
     <sprite>sprites\sprite2</sprite>
@@ -48,6 +50,8 @@
       <object>objects\object4</object>
       <object>objects\obj_wall</object>
       <object>objects\object6</object>
+      <object>objects\straightRazor</object>
+      <object>objects\razorSlash</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -29,6 +29,11 @@
 shotDelay = 8;
 image_index = 0;
 image_speed = 0;
+facing = 1;
+currentBullets = 20;
+maxBullets = 20;
+reloadTime = 100;
+currentReload=0;
 </string>
           </argument>
         </arguments>
@@ -61,14 +66,18 @@ image_yscale = -1;
 x = object1.x-object1.sprite_width/4;
 }
 else image_yscale = +1;
-if (global.bullet==0)
+if (currentDelay &gt; 0)
 {
-global.reload++;
+    currentDelay--;
 }
-if (global.reload==global.reloadtime)
+if (currentBullets==0)//if gun empty reload
 {
-global.bullet = 40;
-global.reload = 0;
+currentReload++;
+}
+if (currentReload&gt;=reloadTime)//if enough time has passed put bullets in gun
+{
+currentBullets = maxBullets;
+currentReload = 0;
 }
 }
 else //if you arent holding the machine gun

@@ -37,6 +37,13 @@ object5.x= object6.x;
 object5.y=object6.y + 5;
 image_angle = point_direction(x, y, mouse_x, mouse_y);
 }
+if (global.gunArray[2]==true)
+{
+object5.x= straightRazor.x;
+object5.y=straightRazor.y;
+image_angle = point_direction(x, y, mouse_x, mouse_y);
+
+}
 </string>
           </argument>
         </arguments>

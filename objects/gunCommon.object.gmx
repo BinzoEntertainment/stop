@@ -28,6 +28,9 @@
             <string>var shotDelay;
 var currentDelay;
 var currentBullets;
+var maxBullets;
+var reloadTime;
+var currentReload;
 </string>
           </argument>
         </arguments>
