@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>currentDelay = 0;
 shotDelay = 8;
+image_index = 0;
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -54,6 +56,11 @@ shotDelay = 8;
 object6.depth = -5000;
 object6.x = object1.x+object1.sprite_width/2;
 object6.y=object1.y;
+if (mouse_x &lt; x){
+image_yscale = -1;
+x = object1.x-object1.sprite_width/4;
+}
+else image_yscale = +1;
 if (global.bullet==0)
 {
 global.reload++;
@@ -66,7 +73,7 @@ global.reload = 0;
 }
 else //if you arent holding the machine gun
 {
-object4.depth = 5;
+object6.depth = 5;
 if (instance_place(object6.x,object6.y,object1))!= noone
 {
 draw_text(object6.x,object6.y,'machine gun');
