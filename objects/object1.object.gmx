@@ -33,6 +33,12 @@ repeat(10)
    i -= 1;
    }
    global.gunArray[0] = true;
+image_index = 0;
+image_speed = 0;
+maxhp = 10;
+hp = 5;
+facing = 1;
+instance_create(x,y, cont_view);
 </string>
           </argument>
         </arguments>
@@ -55,7 +61,10 @@ repeat(10)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if keyboard_check (ord('A')) and place_free (x-10,y) x -= 10;
+            <string>if keyboard_check (ord('A')) and place_free (x-10,y) { 
+x -= 10;
+
+}
 
 if keyboard_check (ord('W')) and place_free (x,y-10) y -= 10;
 
@@ -63,7 +72,37 @@ if keyboard_check (ord('S')) and place_free (x,y+10) y += 10;
 
 if keyboard_check (ord('D')) and place_free (x+10,y) x += 10;
 global.gunSwitch = false;
+
+if mouse_x &gt; x
+{
+    facing = 1;
+} else facing = -1;
+
+
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_sprite_ext(sprite_index,image_index,x,y,facing,1,0,c_white,1)
+			</string>
           </argument>
         </arguments>
       </action>
