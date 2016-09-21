@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>var shotDelay;
 var currentDelay;
+var currentBullets;
 </string>
           </argument>
         </arguments>
