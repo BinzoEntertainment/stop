@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>object5.x= object4.x
-object5.y=object4.y
+            <string>object5.x= object4.x;
+object5.y=object4.y + 5;
 image_angle = point_direction(x, y, mouse_x, mouse_y);
 </string>
           </argument>

@@ -25,10 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(spr_healtbar_border,1,view_xview[0], view_yview[0]);
+            <string>draw_sprite(spr_healthbar_bg,1,view_xview[0]+38, view_yview[0]+17);
+draw_sprite_ext(spr_healthbar_inner,1,view_xview[0]+38, view_yview[0]+17,object1.hp/object1.maxhp,1,0,c_white,1);
+draw_sprite(spr_healthbar_border,1,view_xview[0]+15, view_yview[0]+15);
 
-draw_set_color(c_black);
-draw_text (view_xview[0]+100, view_yview[0]+30, "Score: " +string(global.score));
+
+
 </string>
           </argument>
         </arguments>
