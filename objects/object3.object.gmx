@@ -68,7 +68,6 @@ if mouse_button = mb_left
         <arguments>
           <argument>
             <kind>1</kind>
-<<<<<<< HEAD
             <string>if (global.gunArray[0] == true) //if revolver
 {
 
