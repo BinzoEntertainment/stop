@@ -22,6 +22,10 @@
       <sprite>sprites\spr_healthbar_inner</sprite>
       <sprite>sprites\spr_healthbar_bg</sprite>
     </sprites>
+    <sprites name="Map Marker Sprites">
+      <sprite>sprites\level1Sprite</sprite>
+      <sprite>sprites\level2Sprite</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -53,9 +57,15 @@
       <object>objects\razorSlash</object>
       <object>objects\object3</object>
     </objects>
+    <objects name="Map Markers">
+      <object>objects\level1Marker</object>
+      <object>objects\level2Marker</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\map</room>
+    <room>rooms\room2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
