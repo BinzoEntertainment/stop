@@ -44,14 +44,14 @@
       <object>objects\cont_view</object>
     </objects>
     <objects name="Objects">
-      <object>objects\object3</object>
+      <object>objects\object6</object>
       <object>objects\object2</object>
       <object>objects\object5</object>
       <object>objects\object4</object>
       <object>objects\obj_wall</object>
-      <object>objects\object6</object>
       <object>objects\straightRazor</object>
       <object>objects\razorSlash</object>
+      <object>objects\object3</object>
     </objects>
   </objects>
   <rooms name="rooms">

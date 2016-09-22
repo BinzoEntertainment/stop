@@ -171,10 +171,7 @@ for(i = 0; i &lt; 10; i++)
    global.gunArray[i] = false;
    }
    global.gunArray[1] = true;
-   global.maxbullet = 40;
-   global.reloadtime = 100;
-   global.reload = global.reloadtime;
-   global.bullets = global.maxbullet;
+   global.accuracy = 5;
    global.gunSwitch = true;
    }
 }

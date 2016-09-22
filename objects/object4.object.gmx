@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 0;
+            <string>narrow = 2;
+image_index = 0;
 image_speed = 0;
 shotDelay = 4;
 currentDelay = 0;
@@ -88,7 +89,6 @@ if (currentDelay &gt; 0)
 }
 else
 {
-
 object4.depth = 5;//gun on bottom
 }
 </string>
@@ -173,6 +173,7 @@ for(i = 0; i &lt; 10; i++)
    global.gunArray[i] = false;
    }
    global.gunArray[0] = true;
+   global.accuracy = 1;
    }
    global.gunSwitch = true;
 }
