@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>currentDelay = 0;
 shotDelay = 8;
+
 </string>
           </argument>
         </arguments>
@@ -53,7 +54,8 @@ shotDelay = 8;
 {
 object6.depth = -5000;
 object6.x = object1.x+object1.sprite_width/2;
-object6.y=object1.y;
+object6.y = object1.y;
+
 if (global.bullet==0)
 {
 global.reload++;
@@ -155,6 +157,7 @@ for(i = 0; i &lt; 10; i++)
    global.gunArray[i] = false;
    }
    global.gunArray[1] = true;
+   global.accuracy = 5; 
    global.maxbullet = 40;
    global.reloadtime = 100;
    global.reload = global.reloadtime;

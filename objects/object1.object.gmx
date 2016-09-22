@@ -33,6 +33,7 @@ repeat(10)
    i -= 1;
    }
    global.gunArray[0] = true;
+   global.accuracy = 1;
 image_index = 0;
 image_speed = 0;
 maxhp = 10;
@@ -61,16 +62,16 @@ instance_create(x,y, cont_view);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if keyboard_check (ord('A')) and place_free (x-10,y) { 
-x -= 10;
+            <string>mySpeed = 5
 
-}
+if keyboard_check (ord('A')) and place_free (x-10,y) x -= mySpeed;
 
-if keyboard_check (ord('W')) and place_free (x,y-10) y -= 10;
+if keyboard_check (ord('W')) and place_free (x,y-10) y -= mySpeed;
 
-if keyboard_check (ord('S')) and place_free (x,y+10) y += 10;
+if keyboard_check (ord('S')) and place_free (x,y+10) y += mySpeed;
 
-if keyboard_check (ord('D')) and place_free (x+10,y) x += 10;
+if keyboard_check (ord('D')) and place_free (x+10,y) x += mySpeed;
+
 global.gunSwitch = false;
 
 if mouse_x &gt; x

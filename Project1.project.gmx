@@ -14,7 +14,7 @@
     <sprite>sprites\sprite3</sprite>
     <sprite>sprites\sprite4</sprite>
     <sprite>sprites\spr_wall</sprite>
-    <sprite>sprites\sprite6</sprite>\
+    <sprite>sprites\sprite6</sprite>
     <sprites name="UI">
       <sprite>sprites\spr_healthbar_border</sprite>
       <sprite>sprites\spr_healthbar_inner</sprite>
@@ -34,7 +34,7 @@
   </fonts>
   <objects name="objects">
     <objects name="Characters">
-    <object>objects\gunCommon</object>
+      <object>objects\gunCommon</object>
       <object>objects\object1</object>
     </objects>
     <objects name="Controllers">
@@ -42,12 +42,12 @@
       <object>objects\cont_view</object>
     </objects>
     <objects name="Objects">
-      <object>objects\object3</object>
+      <object>objects\object6</object>
       <object>objects\object2</object>
       <object>objects\object5</object>
       <object>objects\object4</object>
       <object>objects\obj_wall</object>
-    <object>objects\object6</object>
+      <object>objects\object3</object>
     </objects>
   </objects>
   <rooms name="rooms">

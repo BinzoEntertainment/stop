@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>object3.x = mouse_x;
 object3.y = mouse_y;
+
 if mouse_button = mb_left
    {
    if (global.gunArray[1] == true)
@@ -39,8 +40,14 @@ else
 {
 if(global.bullet &gt; 0)
 {
-instance_create(object6.x, object6.y, object2);
-global.bullet--;
+    //first I make a variable that creates a bullet at the guns location
+    myBullet = instance_create(object6.x, object6.y, object2);
+    //Then i give the bullet a direction using the angle of the gun and a random range (the variable accuracy is assigned in the array that stores object6) 
+    myBullet.direction = object6.image_angle + random_range(-global.accuracy, global.accuracy);
+    //then bullet speed is assigned
+    myBullet.speed = 20;
+    
+    global.bullet--;
 object6.currentDelay = object6.shotDelay;
 }
 }
@@ -69,16 +76,21 @@ object6.currentDelay = object6.shotDelay;
           <argument>
             <kind>1</kind>
             <string>if (global.gunArray[0] == true)
-{
-if (object4.currentDelay &lt; 0)
-{
-object4.currentDelay--;
+    {
+    if (object4.currentDelay &lt; 0)
+    {
+    object4.currentDelay--;
 }
+else 
+{
 if(global.bullet &gt; 0)
 {
-instance_create(object4.x, object4.y, object2);
+    myBullet = instance_create(object4.x, object4.y, object2);
+    myBullet.direction = object4.image_angle + random_range(-global.accuracy, global.accuracy);
+    myBullet.speed = 20;
 global.bullet--;
 object4.currentDelay = object4.shotDelay;
+}
 }
 }
 

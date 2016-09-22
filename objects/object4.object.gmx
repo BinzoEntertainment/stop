@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 0;
+            <string>narrow = 2;
+image_index = 0;
 image_speed = 0;
 facing = 1;
 
@@ -66,6 +67,7 @@ image_yscale = -1;
 x = object1.x-object1.sprite_width/4;
 }
 else image_yscale = +1;
+// reload gun 
 if (global.bullet==0)
 {
 global.reload++;
@@ -78,7 +80,8 @@ global.reload = 0;
 }
 else
 {
-object4.depth = 5;//gun on bottom
+object4.depth = 5;
+//gun on bottom
 /*if (instance_place(object4.x,object4.y,object1))!= noone
 {
 //collision detection with player
@@ -144,20 +147,7 @@ currentDelay = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.gunArray[0]==false)
-{
-if (instance_place(object4.x,object4.y,object1))!= noone
-{
-draw_text(object4.x,object4.y,'revolver');
-}
-}
-else
-{
-image_angle = point_direction(x, y, mouse_x, mouse_y);//follow cursor
-}
-
-
-draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+            <string>draw_sprite_ext(sprite_index,image_index,x,y,facing,image_yscale,image_angle,c_white,1)
 </string>
           </argument>
         </arguments>
@@ -206,6 +196,7 @@ for(i = 0; i &lt; 10; i++)
    global.gunArray[i] = false;
    }
    global.gunArray[0] = true;
+   global.accuracy = 1;
    global.maxbullet = 6;;
    global.reloadtime = 40;
    global.reload = global.reloadtime;
@@ -216,29 +207,6 @@ for(i = 0; i &lt; 10; i++)
 }
 
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x,y,facing,image_yscale,image_angle,c_white,1)
 </string>
           </argument>
         </arguments>
