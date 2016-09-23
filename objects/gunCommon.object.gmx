@@ -31,6 +31,7 @@ var currentBullets;
 var maxBullets;
 var reloadTime;
 var currentReload;
+var accuracy;
 </string>
           </argument>
         </arguments>

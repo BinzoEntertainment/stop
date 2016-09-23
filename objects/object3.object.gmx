@@ -34,18 +34,30 @@ if mouse_button = mb_left
         {
             if(object6.currentBullets &gt; 0)
             {
-                //first I make a variable that creates a bullet at the guns location
-				myBullet = instance_create(object6.x, object6.y, object2);
-				//Then i give the bullet a direction using the angle of the gun and a random range (the variable accuracy is assigned in the array that stores object6) 
-				myBullet.direction = object6.image_angle + random_range(-global.accuracy, global.accuracy);
-				//then bullet speed is assigned
-				myBullet.speed = 20;
+                accuracy = object6.accuracy;
+                myBullet = instance_create(object6.x, object6.y, object2);
+                //Then i give the bullet a direction using the angle of the gun and a random range (the variable accuracy is assigned in the array that stores object6) 
+                myBullet.direction = object6.image_angle + random_range(-accuracy, accuracy);
+                myBullet.speed = 20;
                 object6.currentBullets--;
                 object6.currentDelay = object6.shotDelay;
             }
         }
-	}
-   
+   if (global.gunArray[3] == true &amp;&amp; obj_minigun.currentDelay == 0)
+        {
+            if(obj_minigun.currentBullets &gt; 0)
+            {
+                accuracy = obj_minigun.accuracy;
+                myBullet = instance_create(obj_minigun.x, obj_minigun.y, object2);
+                //Then i give the bullet a direction using the angle of the gun and a random range (the variable accuracy is assigned in the array that stores object6) 
+                myBullet.direction = obj_minigun.image_angle + random_range(-accuracy, accuracy);
+                myBullet.speed = 30;
+                obj_minigun.currentBullets--;
+                obj_minigun.currentDelay = obj_minigun.shotDelay;
+            }
+        }
+}
+
 </string>
           </argument>
         </arguments>
@@ -68,19 +80,23 @@ if mouse_button = mb_left
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.gunArray[0] == true) //if revolver
-{
+            <string>/* REVOLVER*/
 
-	if(object4.currentBullets &gt; 0 &amp;&amp; object4.currentDelay==0)
-		{
-			myBullet = instance_create(object4.x, object4.y, object2);
-			myBullet.direction = object4.image_angle + random_range(-global.accuracy, global.accuracy);
-			myBullet.speed = 20;
-			object4.currentBullets--;
-			object4.currentDelay = object4.shotDelay;
-		}
+if (global.gunArray[0] == true) 
+{
+if(object4.currentBullets &gt; 0 &amp;&amp; object4.currentDelay==0)
+{
+myBullet = instance_create(object4.x, object4.y, object2);
+myBullet.direction = object4.image_angle + random_range(-global.accuracy, global.accuracy);
+myBullet.speed = 20;
+object4.currentBullets--;
+object4.currentDelay = object4.shotDelay;
 }
-if (global.gunArray[2] == true) //if straight razor
+}
+
+/* STRAIGHTRAZOR */
+
+if (global.gunArray[2] == true) 
 {
     if (straightRazor.currentDelay == 0)
     {
@@ -89,6 +105,22 @@ if (global.gunArray[2] == true) //if straight razor
            straightRazor.image_yscale = straightRazor.image_yscale*-1
     }
 }
+
+/* SHOTGUN */
+
+if (global.gunArray[4] == true)
+{
+if(obj_shotgun.currentBullets &gt; 0 &amp;&amp; obj_shotgun.currentDelay==0)
+{
+myBullet = instance_create(obj_shotgun.x, obj_shotgun.y, object2);
+myBullet.direction = obj_shotgun.image_angle + random_range(-global.accuracy, global.accuracy);
+myBullet.speed = 20;
+obj_shotgun.currentBullets--;
+obj_shotgun.currentDelay = obj_shotgun.shotDelay;
+}
+}
+
+
 
 
 </string>
