@@ -43,6 +43,18 @@ object5.x= straightRazor.x;
 object5.y=straightRazor.y;
 image_angle = point_direction(x, y, mouse_x, mouse_y);
 }
+if (global.gunArray[3]==true)
+{
+object5.x= obj_minigun.x;
+object5.y= obj_minigun.y;
+image_angle = point_direction(x, y, mouse_x, mouse_y);
+}
+if (global.gunArray[4]==true)
+{
+object5.x= obj_shotgun.x;
+object5.y= obj_shotgun.y;
+image_angle = point_direction(x, y, mouse_x, mouse_y);
+}
 for (i = 0; i &lt;10; i++)
 {
     if global.gunArray[i] == true
