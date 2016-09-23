@@ -42,7 +42,12 @@ if (global.gunArray[2]==true)
 object5.x= straightRazor.x;
 object5.y=straightRazor.y;
 image_angle = point_direction(x, y, mouse_x, mouse_y);
-
+}
+if (global.gunArray[3]==true)
+{
+object5.x= obj_minigun.x;
+object5.y=obj_minigun.y + 5;
+image_angle = point_direction(x, y, mouse_x, mouse_y);
 }
 </string>
           </argument>

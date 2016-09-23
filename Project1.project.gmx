@@ -13,9 +13,11 @@
     <sprite>sprites\sprite0</sprite>
     <sprite>sprites\sprite1</sprite>
     <sprite>sprites\sprite2</sprite>
-    <sprite>sprites\sprite3</sprite>
     <sprite>sprites\sprite4</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_minigun</sprite>
+    <sprite>sprites\sprite3</sprite>
+    <sprite>sprites\spr_shotgun</sprite>
     <sprite>sprites\sprite6</sprite>
     <sprites name="UI">
       <sprite>sprites\spr_healthbar_border</sprite>
@@ -30,6 +32,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\script0.gml</script>
+    <script>scripts\scr_bulletspread.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_arial</font>
@@ -44,12 +47,16 @@
       <object>objects\cont_view</object>
     </objects>
     <objects name="Objects">
-      <object>objects\object6</object>
+      <objects name="weapons">
+        <object>objects\obj_minigun</object>
+        <object>objects\straightRazor</object>
+        <object>objects\object4</object>
+        <object>objects\object6</object>
+        <object>objects\obj_shotgun</object>
+      </objects>
       <object>objects\object2</object>
       <object>objects\object5</object>
-      <object>objects\object4</object>
       <object>objects\obj_wall</object>
-      <object>objects\straightRazor</object>
       <object>objects\razorSlash</object>
       <object>objects\object3</object>
     </objects>

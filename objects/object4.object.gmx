@@ -35,6 +35,7 @@ currentBullets = 6;
 maxBullets = 6;
 reloadTime = 40;
 currentReload=0;
+accuracy = 1;
 
 </string>
           </argument>
